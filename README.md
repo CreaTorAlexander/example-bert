@@ -32,6 +32,17 @@ The tokens [CLS] and [SEP] are always required
 text = "Here is the sentence I want embeddings for."
 
 produces
-['[CLS]', 'here', 'is', 'the', 'sentence', 'i', 'want', 'em', '##bed', '##ding', '##s', 'for', '.', '[SEP]']
+`['[CLS]', 'here', 'is', 'the', 'sentence', 'i', 'want', 'em', '##bed', '##ding', '##s', 'for', '.', '[SEP]']`
 
+"embedding" is represented as
+`['em', '##bed', '##ding', '##s']`
 
+After breaking the text into tokens, we have to convert the sentence from
+a list of strings to a list of vocabulary indeces.
+
+From here on, we'll use the below example sentence, which contains
+two instances of the word "bank" with different meanings.
+
+Example
+- After stealing money from the bank vault, the bank robber was seen 
+- fishing on the Mississippi river bank.
